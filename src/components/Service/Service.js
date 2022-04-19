@@ -3,20 +3,22 @@ import { Button, Card, CardGroup } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const Service = ({ service }) => {
-    const { name, subject, price, img } = service;
+    const { name, about, price, img } = service;
     const navigate = useNavigate()
     const handleProceedCheckOut = () => {
         navigate('/checkout')
     }
     return (
         <div className='col-xl-4'>
-            <Card className=''>
-                <Card.Img variant="top" src="holder.js/100px160" />
+            <Card className='img-fluid'>
+                <Card.Img variant="top" src={img} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>
-                        This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.
+                        {about}
+                    </Card.Text>
+                    <Card.Text>
+                        <h4>image pricr: {price}</h4>
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
