@@ -1,9 +1,9 @@
-import { Button } from 'react-bootstrap';
+import { Button, Toast, ToastContainer } from 'react-bootstrap';
 import React, { useRef, useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocicalLogin from '../../SocialLogin/SocicalLogin';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
 const Login = () => {
@@ -27,17 +27,17 @@ const Login = () => {
         const email = emailRef.current.value
         if (email) {
             await sendPasswordResetEmail(email);
-            toast('Sent email ')
+            Toast('Sent email ')
         }
         else {
-            toast('Please give your email')
+            Toast('Please give your email')
         }
     }
     if (user) {
         navigate(from, { replace: true });
     }
     if (loading || sending) {
-        return <Loading></Loading>
+        return <p className=''>Lodgin...</p>
     }
     return (
         <div className='row mb-5 h-100 '>
@@ -65,7 +65,7 @@ const Login = () => {
                 </div>
 
                 {(error || error1) && <p className='text-danger text-center'>{error.message}</p>}
-                <SocialLogin></SocialLogin>
+                <SocicalLogin></SocicalLogin>
                 <ToastContainer></ToastContainer>
             </div>
         </div>
