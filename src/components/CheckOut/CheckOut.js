@@ -4,11 +4,12 @@ import { Button, Form } from 'react-bootstrap';
 
 const CheckOut = () => {
     const [massege, setMassege] = useState('')
-    const handleSubmit = () => {
+    const handleSubmit = (event) => {
+        event.preventDefault();
         setMassege("Thank You For ChakeOut")
     }
     return (
-        <div className='container mx-auto    row mx-autod  d-flex justify-content-center '>
+        <div className='container mx-auto  my-5  row mx-autod  d-flex justify-content-center '>
             <div className=' col-sm-12 col-lg-6 border shadow pb-5 px-5 '>
                 <h1 className='text-primary text-center'>Please Check</h1>
                 <Form onSubmit={handleSubmit} className='mb-2'>
@@ -25,7 +26,7 @@ const CheckOut = () => {
                         <Form.Label>Phone number</Form.Label>
                         <Form.Control type="number" placeholder="Your Phone number" required />
                     </Form.Group>
-                    <h1 className='text-danger'>{massege}</h1>
+                    <h3 className='my-4 text-center text-danger'>{massege}</h3>
                     <Button variant="primary" type="submit" className='w-100'>
                         Submit
                     </Button>

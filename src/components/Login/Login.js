@@ -26,7 +26,7 @@ const Login = () => {
         navigate(from, { replace: true });
     }
     return (
-        <div className='container mx-auto    row mx-autod  d-flex justify-content-center '>
+        <div className='container mx-auto  my-5  row mx-autod  d-flex justify-content-center '>
             <div className=' col-sm-12 col-lg-6 border shadow pb-5 px-5 '>
                 <h1 className='text-primary text-center'>Please LogIn</h1>
                 <Form onSubmit={handleSignIn} className='mb-2'>

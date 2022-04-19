@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
-import Logo from '../img/doctor-logo-png-medical-dr-symbol-download-1.png'
+import Logo from '../img/wildlifelogo-black-300.png'
 
 const Header = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -12,20 +12,20 @@ const Header = () => {
         signOut(auth);
     }
     return (
-        <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar sticky="top" className='text-white' collapseOnSelect expand="lg" bg="primary bg-opacity-20" variant="dark">
             <Container>
                 <Navbar.Brand as={Link} to="/home">
-                    <img style={{ width: '50px' }} src={Logo} alt="" />
+                    <img src={Logo} alt="" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
-                        <Nav.Link href="/home#services">Services</Nav.Link>
+                        <Nav.Link className='fs-4 text-dark' href="/home#services">Services</Nav.Link>
                     </Nav>
                     <Nav>
-                        <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
-                        <Nav.Link as={Link} to="/about">About</Nav.Link>
-                        {!user ? <Nav.Link as={Link} to="/login">Login</Nav.Link> : <p onClick={handleSignOut} className='my-auto d-inline text-white text-opacity-50'>Log Out</p>}
+                        <Nav.Link className='fs-4 text-dark' as={Link} to="/blogs">Blogs</Nav.Link>
+                        <Nav.Link className='fs-4 text-dark' as={Link} to="/about">About</Nav.Link>
+                        {!user ? <Nav.Link className='fs-4 text-dark' as={Link} to="/login">Login</Nav.Link> : <Nav.Link onClick={handleSignOut} className='my-auto text-dark fs-4 d-inline text-white text-opacity-50'>Log Out</Nav.Link>}
                     </Nav>
                 </Navbar.Collapse>
             </Container>
