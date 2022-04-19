@@ -1,4 +1,5 @@
-import { Button, Toast, ToastContainer } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
 import React, { useRef, useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -27,17 +28,17 @@ const Login = () => {
         const email = emailRef.current.value
         if (email) {
             await sendPasswordResetEmail(email);
-            Toast('Sent email ')
+            toast('Sent email ')
         }
         else {
-            Toast('Please give your email')
+            toast('Please give your email')
         }
     }
     if (user) {
         navigate(from, { replace: true });
     }
     if (loading || sending) {
-        return <p className=''>Lodgin...</p>
+        return <h1 className='text-center my-5 py-5'>Lodgin...</h1>
     }
     return (
         <div className='row mb-5 h-100 '>

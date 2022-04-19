@@ -15,7 +15,7 @@ const Home = () => {
 
                         <h4>Hello, I'm </h4>
                         <h1 className='fs-1 text-info lh-0'><span>Fahid Hasan Fuad </span></h1>
-                        <p className='fs-4'>I a wildlife photorgapher.Wildlife photography is a genre of photography concerned with documenting various forms of wildlife in their natural habitat.</p>
+                        <p className='fs-4'>I am a wildlife photorgapher.Wildlife photography is a genre of photography concerned with documenting various forms of wildlife in their natural habitat.</p>
                     </div>
                     <div className='col-lg-6 col-md-6 col-sm-12 col-12d-flex justify-content-center align-items-center'>
                         <img style={{ width: '350px' }} src='' alt="" />

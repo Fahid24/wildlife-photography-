@@ -18,7 +18,7 @@ const Service = ({ service }) => {
                         {about}
                     </Card.Text>
                     <Card.Text>
-                        <h4>image pricr: {price}</h4>
+                        <h4>image price: {price}</h4>
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>

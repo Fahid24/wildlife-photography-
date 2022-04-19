@@ -1,8 +1,13 @@
-# Getting Started with Create React App
+# wildlife photographer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Live link (https://assignment-authentication.web.app/#services).
 
-## Available Scripts
+## about project
+# The project is about wildlife photographer.
+# There are a home page, login page, about page, blog page, register page and a footer in my project.
+# home is the main section of my projects. There is servise section in the home page.
+# you can't go to the checkOut page with out login.
+# you can sing in in this wibesite with your google account.
 
 In the project directory, you can run:
 
